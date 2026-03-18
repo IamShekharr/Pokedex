@@ -67,7 +67,7 @@ export default function Index() {
       onStartShouldSetPanResponder: () => false,
 
       onMoveShouldSetPanResponder: (_, g) => {
-        // ✅ Sirf tab swipe detect karo jab horizontal movement zyada ho
+        //  Sirf tab swipe detect karo jab horizontal movement zyada ho
         const isHorizontal =
           Math.abs(g.dx) > 15 &&
           Math.abs(g.dx) > Math.abs(g.dy) * 3;
@@ -228,13 +228,13 @@ Respond ONLY with JSON, no backticks:
   return (
     <View style={[styles.wrapper, { backgroundColor: theme.bg }]}>
 
-      {/* ✅ Swipe gesture wrapper */}
+      {/*  Swipe gesture wrapper */}
       <View style={{ flex: 1 }} {...panResponder.panHandlers}>
         <FlatList
           data={filteredPokemons}
           keyExtractor={(item) => item.name}
 
-          // ✅ Jab horizontal swipe ho tab vertical scroll band karo
+          //  Jab horizontal swipe ho tab vertical scroll band karo
           scrollEnabled={!isSwipingHorizontal}
 
           renderItem={({ item }) => {
