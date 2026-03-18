@@ -41,11 +41,11 @@ export default function Details() {
   async function loadPokemon(name: string) {
     setLoading(true);
     try {
-      // ✅ Service se fetch — code repeat nahi
+      // Service se fetch — code repeat nahi
       const data = await fetchPokemonDetail(name);
       setPokemon(data);
 
-      // ✅ Bio + Battle parallel — dono ek saath
+      // Bio + Battle parallel — dono ek saath
       const types   = data.types.map((t) => t.type.name).join(" and ");
       const topStat = [...data.stats].sort((a, b) => b.base_stat - a.base_stat)[0];
 
@@ -166,7 +166,7 @@ export default function Details() {
           )}
         </View>
 
-        {/* ✅ Evolution Chain — naya component */}
+        {/* Evolution Chain — naya component */}
         <EvolutionChain
           pokemonName={pokemon.name}
           mainColor={mainColor}
