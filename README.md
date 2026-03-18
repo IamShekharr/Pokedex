@@ -34,15 +34,3 @@ A feature-rich Pokédex mobile app built with React Native, Expo & TypeScript �
 
 4. Run
    npx expo start
-```
-
----
-
-### Step 2 — .gitignore check karo
-
-`.gitignore` file mein yeh sab hona chahiye:
-```
-node_modules/
-.expo/
-.env
-*.log
